@@ -9,7 +9,10 @@
 ## Requisitos
 - Acceso a IBM Concert. Tu usuario es `<tu-usuario>` y contraseña `bootcamp`.
 - El **token** de OpenShift que te entregaremos.
-- El CLI de OpenShift (`oc.exe`) y **Git Bash** para correr los scripts (son scripts bash; no funcionan en CMD ni PowerShell).
+- El CLI de OpenShift (`oc.exe`) y **Git Bash** para correr los scripts `.sh`.
+  Si prefieres **PowerShell**, cada script tiene su versión `.ps1` (ver [Usar PowerShell](#usar-powershell-en-vez-de-git-bash)).
+
+> Si escribes `desplegar.sh ...` sin `bash` adelante, o lo corres desde PowerShell/CMD, Windows abre el archivo en un editor en vez de ejecutarlo. Usa siempre `bash desplegar.sh ...` en Git Bash, o `.\desplegar.ps1 ...` en PowerShell.
 
 ### Instalar Git Bash
 Si ya tienes Git instalado, salta este paso (busca "Git Bash" en el menú Inicio).
@@ -36,6 +39,21 @@ En Git Bash:
 oc version --client
 ```
 Debe mostrar `Client Version: 4.x.x`.
+
+### Usar PowerShell en vez de Git Bash
+Abre PowerShell dentro de la carpeta `bootcamp-concert` y usa los `.ps1` en lugar de los `.sh`:
+
+| Git Bash | PowerShell |
+|---|---|
+| `bash desplegar.sh bootcamp-<tu-usuario>` | `.\desplegar.ps1 bootcamp-<tu-usuario>` |
+| `bash quitar-probes.sh bootcamp-<tu-usuario>` | `.\quitar-probes.ps1 bootcamp-<tu-usuario>` |
+| `bash restaurar-probes.sh bootcamp-<tu-usuario>` | `.\restaurar-probes.ps1 bootcamp-<tu-usuario>` |
+
+`oc.exe` tiene que estar en el `PATH` de Windows (prueba con `oc version --client`).
+Si PowerShell bloquea los scripts, ejecútalos así:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\desplegar.ps1 bootcamp-<tu-usuario>
+```
 
 ## 0. Prepara la terminal
 1. Clona **este repositorio**.
