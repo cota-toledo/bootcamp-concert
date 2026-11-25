@@ -2,6 +2,10 @@
 
 [← Volver al inicio](README.md)
 
+## Ambiente del bootcamp
+
+![Ambiente del bootcamp](data/ambiente-bootcamp.svg)
+
 ## Requisitos
 - Acceso a IBM Concert. Tu usuario es `<tu-usuario>` y contraseña `bootcamp`.
 - El **token** de OpenShift que te entregaremos.
