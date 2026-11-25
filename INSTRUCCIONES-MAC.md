@@ -27,12 +27,11 @@ oc version --client
 Debe mostrar `Client Version: 4.x.x`.
 
 ## 0. Prepara la terminal
-1. Abre **Terminal** en la carpeta donde quieras guardar el kit.
-2. Clona **este repositorio**, entra a la carpeta e inicia sesión con el token que te enviaremos:
+1. Clona **este repositorio**.
+2. Abre **Terminal** dentro de la carpeta `bootcamp-concert`.
+3. Inicia sesión con el token que te enviaremos:
 
 ```bash
-git clone https://github.com/cota-toledo/bootcamp-concert.git
-cd bootcamp-concert
 oc login --token=<tu-token> --server=https://api.itz-czzc0l.hub01-lb.techzone.ibm.com:6443
 ```
 - Si dice que no tienes acceso a proyectos, no pasa nada: los scripts reciben tu namespace como argumento.
