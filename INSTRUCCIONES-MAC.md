@@ -28,7 +28,7 @@ Debe mostrar `Client Version: 4.x.x`.
 
 ## 0. Prepara la terminal
 1. Abre **Terminal** en la carpeta donde quieras guardar el kit.
-2. Clona el repositorio, entra a la carpeta e inicia sesión con el token que te enviaremos:
+2. Clona **este repositorio**, entra a la carpeta e inicia sesión con el token que te enviaremos:
 
 ```bash
 git clone https://github.com/cota-toledo/bootcamp-concert.git

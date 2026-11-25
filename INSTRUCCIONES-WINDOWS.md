@@ -37,7 +37,7 @@ Debe mostrar `Client Version: 4.x.x`.
 1. Abre **Git Bash** en la carpeta donde quieras guardar el kit
    (en el Explorador: clic derecho en un espacio vacío → **Open Git Bash here**;
    en Windows 11 puede estar dentro de **Mostrar más opciones**).
-2. Clona el repositorio, entra a la carpeta e inicia sesión con el token que te enviaremos:
+2. Clona **este repositorio**, entra a la carpeta e inicia sesión con el token que te enviaremos:
 
 ```bash
 git clone https://github.com/cota-toledo/bootcamp-concert.git
