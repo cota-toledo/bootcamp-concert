@@ -29,5 +29,5 @@ En tu namespace desplegarás la app *hola-resiliencia*, con 3 réplicas, autoesc
 ## Instrucciones
 Elige las instrucciones según tu sistema operativo:
 
-- 🍎 **[Instrucciones Mac](INSTRUCCIONES-MAC.md)**
-- 🪟 **[Instrucciones Windows](INSTRUCCIONES-WINDOWS.md)**
+- **[Instrucciones Mac](INSTRUCCIONES-MAC.md)**
+- **[Instrucciones Windows](INSTRUCCIONES-WINDOWS.md)**
