@@ -17,8 +17,11 @@
 ### Instalar Git Bash
 Si ya tienes Git instalado, salta este paso (busca "Git Bash" en el menú Inicio).
 
-1. Descarga Git para Windows desde https://git-scm.com/download/win.
-2. Instálalo con las opciones por defecto (siguiente, siguiente…).
+1. Descarga el instalador de Git para Windows desde https://git-scm.com/download/win.
+2. Instálalo con las opciones por defecto, pero revisa estas dos pantallas:
+   - **Adjusting your PATH**: deja *"Git from the command line and also from 3rd-party software"*.
+   - **Line ending conversions**: elige *"Checkout as-is, commit Unix-style line endings"*. Así evitas el problema de CRLF en los `.sh`.
+3. Abre **Git Bash** desde el menú Inicio, o con clic derecho en una carpeta → **Open Git Bash here**.
 
 ### Instalar `oc`
 1. Descarga https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/openshift-client-windows.zip
@@ -39,6 +42,8 @@ En Git Bash:
 oc version --client
 ```
 Debe mostrar `Client Version: 4.x.x`.
+
+Si Git Bash no encuentra `oc`, agrega la carpeta donde está `oc.exe` al `PATH` de Windows y vuelve a abrir Git Bash.
 
 ### Usar PowerShell en vez de Git Bash
 Abre PowerShell dentro de la carpeta `bootcamp-concert` y usa los `.ps1` en lugar de los `.sh`:
