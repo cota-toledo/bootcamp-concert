@@ -35,7 +35,6 @@ git clone https://github.com/cota-toledo/bootcamp-concert.git
 cd bootcamp-concert
 oc login --token=<tu-token> --server=https://api.itz-czzc0l.hub01-lb.techzone.ibm.com:6443
 ```
-- Si aparece un aviso sobre certificados, responde `y`.
 - Si dice que no tienes acceso a proyectos, no pasa nada: los scripts reciben tu namespace como argumento.
 
 > Tu token solo te da acceso a tu namespace. No lo compartas.
