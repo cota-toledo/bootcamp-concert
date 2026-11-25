@@ -1,5 +1,17 @@
 # Bootcamp IBM Concert · BeeTech 
 
+## Caso práctico
+Cada asistente trabaja con *hola-resiliencia*, una app sencilla desplegada en su propio namespace de OpenShift. La descubrimos en IBM Concert para obtener su postura, le quitamos los health checks y volvemos a evaluarla para ver cómo Concert detecta el riesgo de disponibilidad que Kubernetes ya no puede ver.
+
+![Ambiente del bootcamp](data/ambiente-bootcamp.svg)
+
+| | Etapa | Qué hacemos |
+|---|---|---|
+| **01** | **Descubrir la app** | Con *Discover your data* conectamos nuestro namespace y creamos la aplicación en Concert. |
+| **02** | **Medir la línea base** | Revisamos la postura inicial y anotamos **Availability** y **Usability**. |
+| **03** | **Quitar los health checks** | Con `quitar-probes.sh` eliminamos las probes readiness y liveness del Deployment. |
+| **04** | **Reevaluar y comparar** | Con *Run now* generamos una nueva evaluación y comparamos los pilares. |
+
 ## Tu usuario
 Tu usuario es **tu correo hasta antes del `@`**, reemplazando los puntos (`.`) por guiones (`-`).
 
