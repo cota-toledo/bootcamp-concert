@@ -5,12 +5,12 @@ Cada asistente trabaja con *hola-resiliencia*, una app sencilla desplegada en su
 
 ![Ambiente del bootcamp](data/ambiente-bootcamp.svg)
 
-| | Etapa | Qué hacemos |
-|---|---|---|
-| **01** | **Descubrir la app** | Con *Discover your data* conectamos nuestro namespace y creamos la aplicación en Concert. |
-| **02** | **Medir la línea base** | Revisamos la postura inicial y anotamos **Availability** y **Usability**. |
-| **03** | **Quitar los health checks** | Con `quitar-probes.sh` eliminamos las probes readiness y liveness del Deployment. |
-| **04** | **Reevaluar y comparar** | Con *Run now* generamos una nueva evaluación y comparamos los pilares. |
+| Etapa | Qué hacemos |
+|---|---|
+| **Descubrir la app** | Con *Discover your data* conectamos nuestro namespace y creamos la aplicación en Concert. |
+| **Medir la línea base** | Revisamos la postura inicial y anotamos **Availability** y **Usability**. |
+| **Quitar los health checks** | Con `quitar-probes.sh` eliminamos las probes readiness y liveness del Deployment. |
+| **Reevaluar y comparar** | Con *Run now* generamos una nueva evaluación y comparamos los pilares. |
 
 ## Tu usuario
 Tu usuario es **tu correo hasta antes del `@`**, reemplazando los puntos (`.`) por guiones (`-`).
