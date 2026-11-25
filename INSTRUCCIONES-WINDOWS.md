@@ -34,12 +34,13 @@ oc version --client
 Debe mostrar `Client Version: 4.x.x`.
 
 ## 0. Prepara la terminal
-1. Abre la carpeta **Descargas** en el Explorador.
-2. Clic derecho sobre `asistentes-bootcamp-concert.zip` → **Extraer todo…** → **Extraer**.
-3. Entra a la carpeta extraída hasta ver los archivos `quitar-probes.sh` y `restaurar-probes.sh`.
+1. Descarga el kit: entra a https://github.com/cota-toledo/bootcamp-concert → botón verde **Code** → **Download ZIP**.
+2. Abre la carpeta **Descargas** en el Explorador.
+3. Clic derecho sobre `bootcamp-concert-main.zip` → **Extraer todo…** → **Extraer**.
+4. Entra a la carpeta extraída hasta ver los archivos `quitar-probes.sh` y `restaurar-probes.sh`.
    Clic derecho en un espacio vacío → **Open Git Bash here**
    (en Windows 11 puede estar dentro de **Mostrar más opciones**).
-4. Inicia sesión con `oc login` usando el token que te enviaremos:
+5. Inicia sesión con `oc login` usando el token que te enviaremos:
 
 ```bash
 oc login --token=<tu-token> --server=https://api.itz-czzc0l.hub01-lb.techzone.ibm.com:6443
@@ -80,7 +81,7 @@ Resilience → **Postures** → tu postura → última evaluación.
 Anota **Availability** y **Usability** (deberían estar en 100).
 
 ## 3. Quita los health checks
-En Git Bash, dentro de la carpeta `asistentes-bootcamp-concert`:
+En Git Bash, dentro de la carpeta `bootcamp-concert-main`:
 ```bash
 bash quitar-probes.sh concert-bootcamp-<tu-usuario>
 ```
