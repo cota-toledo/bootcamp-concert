@@ -5,7 +5,7 @@
 ## Requisitos
 - Acceso a IBM Concert. Tu usuario es `<tu-usuario>` y contraseña `bootcamp`.
 - El **token** de OpenShift que te entregaremos (da acceso solo a tu namespace).
-- El CLI de OpenShift (`oc`) y la app **Terminal** (viene con tu Mac: búscala con `⌘ + Espacio` → "Terminal").
+- **Git**, el CLI de OpenShift (`oc`) y la app **Terminal** (viene con tu Mac: búscala con `⌘ + Espacio` → "Terminal").
 
 ### Instalar `oc`
 
@@ -35,7 +35,6 @@ git clone https://github.com/cota-toledo/bootcamp-concert.git
 cd bootcamp-concert
 oc login --token=<tu-token> --server=https://api.itz-czzc0l.hub01-lb.techzone.ibm.com:6443
 ```
-- Si es la primera vez que usas `git`, macOS te pedirá instalar las **herramientas de línea de comandos**: acepta y vuelve a ejecutar el `git clone`.
 - Si aparece un aviso sobre certificados, responde `y`.
 - Si dice que no tienes acceso a proyectos, no pasa nada: los scripts reciben tu namespace como argumento.
 
