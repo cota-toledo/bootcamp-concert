@@ -4,7 +4,7 @@
 
 ## Requisitos
 - Acceso a IBM Concert. Tu usuario es `<tu-usuario>` y contraseña `bootcamp`.
-- El **token** de OpenShift que te entregaremos (da acceso solo a tu namespace).
+- El **token** de OpenShift que te entregaremos.
 - El CLI de OpenShift (`oc.exe`) y **Git Bash** para correr los scripts (son scripts bash; no funcionan en CMD ni PowerShell).
 
 ### Instalar Git Bash
@@ -38,11 +38,20 @@ Debe mostrar `Client Version: 4.x.x`.
 2. Abre **Git Bash** dentro de la carpeta `bootcamp-concert`
    (en el Explorador: clic derecho en un espacio vacío → **Open Git Bash here**;
    en Windows 11 puede estar dentro de **Mostrar más opciones**).
-3. Pega el comando `oc login` que te enviaremos con un token para que inicies sesión en el namespace con el que interactuarás.
+3. Pega el comando `oc login` que te enviaremos con un token para que inicies sesión en el cluster.
 
-> Tu token solo te da acceso a tu namespace. No lo compartas.
+> No compartas tu token.
 
-## 1. Descubre tu app en Concert
+## 1. Despliega tu app
+En tu terminal, dentro de la carpeta `bootcamp-concert`:
+
+```bash
+bash desplegar.sh <tu-usuario>
+```
+
+El script crea tu namespace `<tu-usuario>` (si no existe), despliega la app *hola-resiliencia* y espera a que los pods estén listos. Al final muestra la URL de tu app: ábrela para comprobar que funciona.
+
+## 2. Descubre tu app en Concert
 
 Entra a IBM Concert en https://concert-ibm-concert.apps.itz-czzc0l.hub01-lb.techzone.ibm.com/concert/#/ e inicia sesión con tu usuario `<tu-usuario>` y la contraseña `bootcamp`.
 
@@ -67,11 +76,11 @@ Entra a IBM Concert en https://concert-ibm-concert.apps.itz-czzc0l.hub01-lb.tech
 
    ![Summary](data/discover5.png)
 
-## 2. Revisa tu postura inicial
+## 3. Revisa tu postura inicial
 Resilience → **Postures** → tu postura → última evaluación.
 Anota **Availability** y **Usability** (deberían estar en 100).
 
-## 3. Quita los health checks
+## 4. Quita los health checks
 En tu terminal, dentro de la carpeta `bootcamp-concert`:
 
 ```bash
@@ -98,15 +107,15 @@ Al cambiar el Deployment, OpenShift crea pods nuevos **sin health checks** y ree
 
 **¿Qué cambia?** La app sigue respondiendo igual, pero Kubernetes ya no puede detectar si se cuelga: le seguiría enviando tráfico y nunca la reiniciaría. Eso es lo que Concert va a detectar en el siguiente paso.
 
-## 4. Reevalúa
+## 5. Reevalúa
 Concert → **Integrations → Ingestion jobs** → tu job → **⋮ → Run now**.
 Espera **~2 minutos** y abre la **última** evaluación de tu postura.
 
-## 5. Compara
+## 6. Compara
 ¿Qué pasó con **Availability** y **Usability**?
 > Compara esos pilares, no el puntaje total: Security puede variar sola mientras llegan los escaneos.
 
-## 6. (Opcional) Vuelve atrás
+## 7. (Opcional) Vuelve atrás
 ```bash
 bash restaurar-probes.sh <tu-usuario>
 ```

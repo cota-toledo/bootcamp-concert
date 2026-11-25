@@ -12,7 +12,7 @@ Tu usuario es **tu correo hasta antes del `@`**, reemplazando los puntos (`.`) p
 - Para **entrar a IBM Concert**.
 - En tu **namespace**: **`<tu-usuario>`** (ej: `juan-1`).
 
-En tu namespace corre la app *hola-resiliencia*, con 3 réplicas, autoescalado y health checks.
+En tu namespace desplegarás la app *hola-resiliencia*, con 3 réplicas, autoescalado y health checks.
 
 ## Instrucciones
 Elige las instrucciones según tu sistema operativo:
