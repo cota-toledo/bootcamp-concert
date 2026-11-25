@@ -38,7 +38,7 @@ Debe mostrar `Client Version: 4.x.x`.
 2. Abre **Git Bash** dentro de la carpeta `bootcamp-concert`
    (en el Explorador: clic derecho en un espacio vacío → **Open Git Bash here**;
    en Windows 11 puede estar dentro de **Mostrar más opciones**).
-3. Pega el comando `oc login` que te enviaremos.
+3. Pega el comando `oc login` que te enviaremos con un token para que inicies sesión en el namespace con el que interactuarás.
 
 > Tu token solo te da acceso a tu namespace. No lo compartas.
 

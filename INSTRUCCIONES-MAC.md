@@ -29,7 +29,7 @@ Debe mostrar `Client Version: 4.x.x`.
 ## 0. Prepara la terminal
 1. Clona **este repositorio**.
 2. Abre **Terminal** dentro de la carpeta `bootcamp-concert`.
-3. Pega el comando `oc login` que te enviaremos.
+3. Pega el comando `oc login` que te enviaremos con un token para que inicies sesión en el namespace con el que interactuarás.
 
 > Tu token solo te da acceso a tu namespace. No lo compartas.
 
