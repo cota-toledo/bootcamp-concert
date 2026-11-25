@@ -10,7 +10,7 @@ Tu usuario es **tu correo hasta antes del `@`**, reemplazando los puntos (`.`) p
 
 Úsalo en todos los pasos donde dice `<tu-usuario>`:
 - Para **entrar a IBM Concert**.
-- En tu **namespace**: **`concert-bootcamp-<tu-usuario>`** (ej: `concert-bootcamp-juan-1`).
+- En tu **namespace**: **`<tu-usuario>`** (ej: `juan-1`).
 
 En tu namespace corre la app *hola-resiliencia*, con 3 réplicas, autoescalado y health checks.
 
