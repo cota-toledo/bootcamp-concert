@@ -1,4 +1,4 @@
-# Bootcamp IBM Concert · Bee Tech — Kit del asistente
+# Bootcamp IBM Concert · BeeTech 
 
 ## Tu usuario
 Tu usuario es **tu correo hasta antes del `@`**, reemplazando los puntos (`.`) por guiones (`-`).
