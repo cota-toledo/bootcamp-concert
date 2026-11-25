@@ -46,10 +46,10 @@ Debe mostrar `Client Version: 4.x.x`.
 En tu terminal, dentro de la carpeta `bootcamp-concert`:
 
 ```bash
-bash desplegar.sh <tu-usuario>
+bash desplegar.sh bootcamp-<tu-usuario>
 ```
 
-El script crea tu namespace `<tu-usuario>` (si no existe), despliega la app *hola-resiliencia* y espera a que los pods estén listos. Al final muestra la URL de tu app: ábrela para comprobar que funciona.
+El script crea tu namespace `bootcamp-<tu-usuario>` (si no existe), despliega la app *hola-resiliencia* y espera a que los pods estén listos. Al final muestra la URL de tu app: ábrela para comprobar que funciona.
 
 ## 2. Descubre tu app en Concert
 
@@ -57,15 +57,15 @@ Entra a IBM Concert en https://concert-ibm-concert.apps.itz-czzc0l.hub01-lb.tech
 
 ![Concert - Resilience](data/home.png)
 
-1. Concert → **Discover your data** → *Red Hat OpenShift (OCP)* → **Use existing connection**: `Openshift TZC` → Cluster name `<tu-usuario>` → Next.
+1. Concert → **Discover your data** → *Red Hat OpenShift (OCP)* → **Use existing connection**: `Openshift TZC` → Cluster name `bootcamp-<tu-usuario>` → Next.
 
    ![Discover your data](data/discover1.png)
 
-2. Target environment: `<tu-usuario>` · Assessment period: **Minute** · count **1**.
+2. Target environment: `bootcamp-<tu-usuario>` · Assessment period: **Minute** · count **1**.
 
    ![Target environment](data/discover2.png)
 
-3. Namespaces → **Select Namespaces** → *Advanced filters → Include namespaces*: escribe tu namespace `<tu-usuario>` → **Apply**
+3. Namespaces → **Select Namespaces** → *Advanced filters → Include namespaces*: escribe tu namespace `bootcamp-<tu-usuario>` → **Apply**
    → márcalo **solo a él** → **Select**.
 
    ![Namespaces](data/discover3.png)
@@ -84,14 +84,14 @@ Anota **Availability** y **Usability** (deberían estar en 100).
 En tu terminal, dentro de la carpeta `bootcamp-concert`:
 
 ```bash
-bash quitar-probes.sh <tu-usuario>
+bash quitar-probes.sh bootcamp-<tu-usuario>
 ```
 
 ### ¿Qué hace el script?
 Por dentro ejecuta este comando:
 
 ```bash
-oc set probe deployment/hola-resiliencia --readiness --liveness --remove -n <tu-usuario>
+oc set probe deployment/hola-resiliencia --readiness --liveness --remove -n bootcamp-<tu-usuario>
 ```
 
 | Parte | Qué significa |
@@ -101,7 +101,7 @@ oc set probe deployment/hola-resiliencia --readiness --liveness --remove -n <tu-
 | `--readiness` | La probe que indica si el pod está **listo para recibir tráfico**. Si falla, Kubernetes deja de enviarle requests. |
 | `--liveness` | La probe que indica si el pod **sigue vivo**. Si falla, Kubernetes reinicia el contenedor. |
 | `--remove` | Elimina esas probes en vez de crearlas o modificarlas. |
-| `-n <tu-usuario>` | El namespace donde está tu app. |
+| `-n bootcamp-<tu-usuario>` | El namespace donde está tu app. |
 
 Al cambiar el Deployment, OpenShift crea pods nuevos **sin health checks** y reemplaza los anteriores uno a uno (rolling update), así que la app no se cae. El script espera a que termine (`oc rollout status`) y al final muestra las probes actuales, que deberían salir vacías.
 
@@ -117,7 +117,7 @@ Espera **~2 minutos** y abre la **última** evaluación de tu postura.
 
 ## 7. (Opcional) Vuelve atrás
 ```bash
-bash restaurar-probes.sh <tu-usuario>
+bash restaurar-probes.sh bootcamp-<tu-usuario>
 ```
 Run now otra vez → Availability y Usability deberían volver a 100.
 

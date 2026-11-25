@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Vuelve a poner los health checks (readiness y liveness probes) de la app.
-# Uso: bash restaurar-probes.sh <tu-namespace>   ej: bash restaurar-probes.sh juan-1
+# Uso: bash restaurar-probes.sh <tu-namespace>   ej: bash restaurar-probes.sh bootcamp-juan-1
 # Efecto esperado en Concert (tras Run now): Availability y Usability vuelven a 100.
 set -euo pipefail
-NS="${1:?Indica tu namespace, ej: bash restaurar-probes.sh juan-1}"
+NS="${1:?Indica tu namespace, ej: bash restaurar-probes.sh bootcamp-juan-1}"
 echo "▶ Restaurando readiness y liveness probes en $NS..."
 oc set probe deployment/hola-resiliencia --readiness -n "$NS" \
   --get-url=http://:8080/ --initial-delay-seconds=5 --period-seconds=10
