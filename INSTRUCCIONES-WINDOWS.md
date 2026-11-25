@@ -17,11 +17,18 @@
 ### Instalar Git Bash
 Si ya tienes Git instalado, salta este paso (busca "Git Bash" en el menú Inicio).
 
-1. Descarga el instalador de Git para Windows desde https://git-scm.com/download/win.
-2. Instálalo con las opciones por defecto, pero revisa estas dos pantallas:
-   - **Adjusting your PATH**: deja *"Git from the command line and also from 3rd-party software"*.
-   - **Line ending conversions**: elige *"Checkout as-is, commit Unix-style line endings"*. Así evitas el problema de CRLF en los `.sh`.
-3. Abre **Git Bash** desde el menú Inicio, o con clic derecho en una carpeta → **Open Git Bash here**.
+Instala **Git for Windows**, que trae Git Bash.
+
+**Opción 1: con winget** (viene en Windows 10/11), desde PowerShell:
+```powershell
+winget install --id Git.Git -e --source winget
+```
+
+**Opción 2: con el instalador.** Descárgalo desde https://git-scm.com/download/win y deja las opciones por defecto, pero revisa estas dos pantallas:
+- **Adjusting your PATH**: deja *"Git from the command line and also from 3rd-party software"*.
+- **Line ending conversions**: elige *"Checkout as-is, commit Unix-style line endings"*. Así evitas el problema de CRLF en los `.sh`.
+
+Después de instalar, abre **Git Bash** desde el menú Inicio, o con clic derecho en una carpeta → **Open Git Bash here**.
 
 ### Instalar `oc`
 1. Descarga https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/openshift-client-windows.zip
