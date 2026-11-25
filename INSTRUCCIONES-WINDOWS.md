@@ -44,6 +44,8 @@ Debe mostrar `Client Version: 4.x.x`.
 
 ## 1. Descubre tu app en Concert
 
+Entra a IBM Concert en https://concert-ibm-concert.apps.itz-czzc0l.hub01-lb.techzone.ibm.com/concert/#/ e inicia sesión con tu usuario `<tu-usuario>` y la contraseña `bootcamp`.
+
 ![Concert - Resilience](data/home.png)
 
 1. Concert → **Discover your data** → *Red Hat OpenShift (OCP)* → **Use existing connection**: `Openshift TZC` → Cluster name `concert-bootcamp-<tu-usuario>` → Next.
