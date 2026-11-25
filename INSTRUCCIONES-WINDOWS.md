@@ -38,13 +38,7 @@ Debe mostrar `Client Version: 4.x.x`.
 2. Abre **Git Bash** dentro de la carpeta `bootcamp-concert`
    (en el Explorador: clic derecho en un espacio vacío → **Open Git Bash here**;
    en Windows 11 puede estar dentro de **Mostrar más opciones**).
-3. Pega el comando `oc login` que te enviaremos. Ya trae tu token (una cadena muy larga que empieza con `eyJ`) y tiene este formato:
-
-```bash
-oc login --token=<tu-token> --server=https://api.itz-czzc0l.hub01-lb.techzone.ibm.com:6443 --insecure-skip-tls-verify=true && oc project concert-bootcamp-<tu-usuario>
-```
-- Cópialo completo, en una sola línea.
-- Si todo salió bien, al final verás `Now using project "concert-bootcamp-<tu-usuario>"`.
+3. Pega el comando `oc login` que te enviaremos.
 
 > Tu token solo te da acceso a tu namespace. No lo compartas.
 
