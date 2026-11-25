@@ -70,10 +70,31 @@ Resilience → **Postures** → tu postura → última evaluación.
 Anota **Availability** y **Usability** (deberían estar en 100).
 
 ## 3. Quita los health checks
-En Git Bash, dentro de la carpeta `bootcamp-concert`:
+En tu terminal, dentro de la carpeta `bootcamp-concert`:
+
 ```bash
 bash quitar-probes.sh concert-bootcamp-<tu-usuario>
 ```
+
+### ¿Qué hace el script?
+Por dentro ejecuta este comando:
+
+```bash
+oc set probe deployment/hola-resiliencia --readiness --liveness --remove -n concert-bootcamp-<tu-usuario>
+```
+
+| Parte | Qué significa |
+|---|---|
+| `oc set probe` | Modifica los health checks (probes) de un recurso. |
+| `deployment/hola-resiliencia` | El Deployment de tu app. |
+| `--readiness` | La probe que indica si el pod está **listo para recibir tráfico**. Si falla, Kubernetes deja de enviarle requests. |
+| `--liveness` | La probe que indica si el pod **sigue vivo**. Si falla, Kubernetes reinicia el contenedor. |
+| `--remove` | Elimina esas probes en vez de crearlas o modificarlas. |
+| `-n concert-bootcamp-<tu-usuario>` | El namespace donde está tu app. |
+
+Al cambiar el Deployment, OpenShift crea pods nuevos **sin health checks** y reemplaza los anteriores uno a uno (rolling update), así que la app no se cae. El script espera a que termine (`oc rollout status`) y al final muestra las probes actuales, que deberían salir vacías.
+
+**¿Qué cambia?** La app sigue respondiendo igual, pero Kubernetes ya no puede detectar si se cuelga: le seguiría enviando tráfico y nunca la reiniciaría. Eso es lo que Concert va a detectar en el siguiente paso.
 
 ## 4. Reevalúa
 Concert → **Integrations → Ingestion jobs** → tu job → **⋮ → Run now**.
