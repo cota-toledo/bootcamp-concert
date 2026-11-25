@@ -38,14 +38,13 @@ Debe mostrar `Client Version: 4.x.x`.
 2. Abre **Git Bash** dentro de la carpeta `bootcamp-concert`
    (en el Explorador: clic derecho en un espacio vacío → **Open Git Bash here**;
    en Windows 11 puede estar dentro de **Mostrar más opciones**).
-3. Inicia sesión con el token que te enviaremos:
+3. Pega el comando `oc login` que te enviaremos. Ya trae tu token (una cadena muy larga que empieza con `eyJ`) y tiene este formato:
 
 ```bash
-oc login --token=<tu-token> --server=https://api.itz-czzc0l.hub01-lb.techzone.ibm.com:6443
+oc login --token=<tu-token> --server=https://api.itz-czzc0l.hub01-lb.techzone.ibm.com:6443 --insecure-skip-tls-verify=true && oc project concert-bootcamp-<tu-usuario>
 ```
-- Si el comando se queda pegado sin mostrar nada, ciérralo con `Ctrl + C` y vuelve a ejecutarlo agregando `winpty` al inicio:
-  `winpty oc login --token=<tu-token> --server=https://api.itz-czzc0l.hub01-lb.techzone.ibm.com:6443`
-- Si dice que no tienes acceso a proyectos, no pasa nada: los scripts reciben tu namespace como argumento.
+- Cópialo completo, en una sola línea.
+- Si todo salió bien, al final verás `Now using project "concert-bootcamp-<tu-usuario>"`.
 
 > Tu token solo te da acceso a tu namespace. No lo compartas.
 
