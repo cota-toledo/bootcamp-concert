@@ -34,18 +34,16 @@ oc version --client
 Debe mostrar `Client Version: 4.x.x`.
 
 ## 0. Prepara la terminal
-1. Descarga el kit: entra a https://github.com/cota-toledo/bootcamp-concert → botón verde **Code** → **Download ZIP**.
-2. Abre la carpeta **Descargas** en el Explorador.
-3. Clic derecho sobre `bootcamp-concert-main.zip` → **Extraer todo…** → **Extraer**.
-4. Entra a la carpeta extraída hasta ver los archivos `quitar-probes.sh` y `restaurar-probes.sh`.
-   Clic derecho en un espacio vacío → **Open Git Bash here**
-   (en Windows 11 puede estar dentro de **Mostrar más opciones**).
-5. Inicia sesión con `oc login` usando el token que te enviaremos:
+1. Abre **Git Bash** en la carpeta donde quieras guardar el kit
+   (en el Explorador: clic derecho en un espacio vacío → **Open Git Bash here**;
+   en Windows 11 puede estar dentro de **Mostrar más opciones**).
+2. Clona el repositorio, entra a la carpeta e inicia sesión con el token que te enviaremos:
 
 ```bash
+git clone https://github.com/cota-toledo/bootcamp-concert.git
+cd bootcamp-concert
 oc login --token=<tu-token> --server=https://api.itz-czzc0l.hub01-lb.techzone.ibm.com:6443
 ```
-- Comprueba que estás en la carpeta correcta con `ls`: deben aparecer los archivos `.sh`.
 - Si aparece un aviso sobre certificados, responde `y`.
 - Si el comando se queda pegado sin mostrar nada, ciérralo con `Ctrl + C` y vuelve a ejecutarlo agregando `winpty` al inicio:
   `winpty oc login --token=<tu-token> --server=https://api.itz-czzc0l.hub01-lb.techzone.ibm.com:6443`
@@ -81,7 +79,7 @@ Resilience → **Postures** → tu postura → última evaluación.
 Anota **Availability** y **Usability** (deberían estar en 100).
 
 ## 3. Quita los health checks
-En Git Bash, dentro de la carpeta `bootcamp-concert-main`:
+En Git Bash, dentro de la carpeta `bootcamp-concert`:
 ```bash
 bash quitar-probes.sh concert-bootcamp-<tu-usuario>
 ```

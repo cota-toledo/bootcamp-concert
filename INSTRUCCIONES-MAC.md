@@ -27,18 +27,15 @@ oc version --client
 Debe mostrar `Client Version: 4.x.x`.
 
 ## 0. Prepara la terminal
-1. Descarga el kit: entra a https://github.com/cota-toledo/bootcamp-concert → botón verde **Code** → **Download ZIP**.
-2. Abre **Terminal** y ve a la carpeta **Descargas** (en la terminal se llama `~/Downloads`).
-3. Descomprime la carpeta y entra en ella.
-4. Inicia sesión con `oc login` usando el token que te enviaremos.
+1. Abre **Terminal** en la carpeta donde quieras guardar el kit.
+2. Clona el repositorio, entra a la carpeta e inicia sesión con el token que te enviaremos:
 
 ```bash
-cd ~/Downloads
-unzip bootcamp-concert-main.zip
-cd bootcamp-concert-main
+git clone https://github.com/cota-toledo/bootcamp-concert.git
+cd bootcamp-concert
 oc login --token=<tu-token> --server=https://api.itz-czzc0l.hub01-lb.techzone.ibm.com:6443
 ```
-- Si Safari ya descomprimió el archivo (ves la carpeta `bootcamp-concert-main` en Descargas), salta el `unzip`.
+- Si es la primera vez que usas `git`, macOS te pedirá instalar las **herramientas de línea de comandos**: acepta y vuelve a ejecutar el `git clone`.
 - Si aparece un aviso sobre certificados, responde `y`.
 - Si dice que no tienes acceso a proyectos, no pasa nada: los scripts reciben tu namespace como argumento.
 
@@ -72,7 +69,7 @@ Resilience → **Postures** → tu postura → última evaluación.
 Anota **Availability** y **Usability** (deberían estar en 100).
 
 ## 3. Quita los health checks
-En la Terminal, dentro de la carpeta `bootcamp-concert-main`:
+En la Terminal, dentro de la carpeta `bootcamp-concert`:
 ```bash
 bash quitar-probes.sh concert-bootcamp-<tu-usuario>
 ```
